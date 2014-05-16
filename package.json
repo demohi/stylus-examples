@@ -1,8 +1,9 @@
 {
-    "name": "application-name",
-    "version": "0.0.1",
-    "dependencies":{
-        "gulp": "3.6.2",
-        "gulp-stylus": "1.0.0"
-    }
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "gulp": "3.6.2",
+    "gulp-stylus": "1.0.0",
+    "nib": "^1.0.2"
+  }
 }
