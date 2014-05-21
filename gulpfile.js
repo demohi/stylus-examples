@@ -2,9 +2,11 @@
  * Created by mdemo on 2014/5/14.
  */
 
+// include the required packages.
 var gulp = require('gulp');
-var stylus = require('gulp-stylus');
 var nib = require('nib');
+var stylus = require('gulp-stylus');
+
 gulp.task('selectors', function(){
    gulp.src('./selectors/selectors.styl')
        .pipe(stylus())
@@ -15,9 +17,10 @@ gulp.task('variables', function(){
         .pipe(stylus())
         .pipe(gulp.dest('./build'));
 });
-gulp.task('nib', function(){
+// Use nib
+gulp.task('nib', function () {
     gulp.src('./nib/nib.styl')
-        .pipe(stylus({ use: nib(), compress: true, errors: true }))
+        .pipe(stylus({use: [nib()],errors: true}))
         .pipe(gulp.dest('./build'));
 });
 gulp.task('watch', function(){
